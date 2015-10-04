@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <title>Directives</title>
+  </head>
+  <body ng-app="" ng-init="countries = [{locale:'en-US', name:'United States'}, {locale:'en-GB', name:'United Kingdom'}, {locale:'en-FR', name:'France'}]">
+    <h1>Use of ng-app, ng-repeat, ng-init and ng-model directive</h1>
+
+    <label for="helloName">Enter your name: </label>
+    <input type="text" name="helloName" value="" placeholder="Your name" ng-model="name">
+
+    <br>
+    Hello <span ng-bind="name"></span>
+
+    <p>
+      List of countries with locale:
+    </p>
+
+    <ol>
+      <li ng-repeat = "country in countries">
+        {{'Country : ' + country.name + ', Locale: ' + country.locale}}
+      </li>
+    </ol>
+  </body>
+</html>
