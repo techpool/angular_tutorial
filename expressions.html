@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html ng-app="">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <title>Expressions in Angular JS</title>
+  </head>
+  <body ng-init="quantity = 10; cost = 30; student={firstname:'Suryadeep', lastname:'Pal', rollno:47}; marks = [80, 90, 75, 87]">
+    <h2>Expressions!</h2>
+
+    <p>
+      Hello {{student.firstname + " " + student.lastname}}!
+    </p>
+
+    <p>
+      Expense on books: Rs. {{cost * quantity}}
+    </p>
+
+    <p>
+      Roll. No.: {{student.rollno}}
+    </p>
+
+    <p ng-repeat="mark in marks">
+      Marks : {{mark}}
+    </p>
+  </body>
+</html>
