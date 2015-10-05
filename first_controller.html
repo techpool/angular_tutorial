@@ -8,9 +8,11 @@
 			<h4>My first controller</h4>
 			<h5>Welcome <strong>{{title}}</strong> Have a nice day</h5>
 		</div>
-		
+
 		<script type="text/javascript">
+		//Controllers are javascript functions that are bound to a particular scope
 			angular.module("myapp", []).controller("hello", function($scope){
+				//The scope acts as a glue between the view and the controller.
 				$scope.title = "Suryadeep!";
 			});
 		</script>
