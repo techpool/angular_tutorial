@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <title>Controllers in HTML</title>
+  </head>
+  <body ng-app="mainApp">
+    <div class="" ng-controller="nameConcatController">
+      <label for="firstName">Enter your first name: </label>
+      <input type="text" name="firstName" ng-model="student.firstName">
+
+      <label for="lastName">Enter your last name: </label>
+      <input type="text" name="lastName" ng-model="student.lastName">
+      <br>
+
+      <p>
+        You are entering: {{student.fullName()}}
+      </p>
+
+      <script type="text/javascript">
+        var mainApp = angular.module("mainApp", []);
+
+        mainApp.controller('nameConcatController', function($scope){
+          $scope.student = {
+            firstName: "Suryadeep",
+            lastName: "Pal",
+
+            fullName: function(){
+              var studentObject;
+              studentObject = $scope.student;
+              return studentObject.firstName + " " + studentObject.lastName;
+            }
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
